@@ -11,11 +11,16 @@
 ### Core HTML Pages (Minimum 5 required)
 - [ ] **`index.html` (Homepage)**
     - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with <header> tag)**
+
     - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start
           Exploring" button linking to `places.html`.
+
     - [ ] Create a "Featured Categories" section displaying at least 4 categories (e.g., Restaurants, Parks) with images, titles, and descriptions.
+
     - [ ] Create a "Featured Places" section displaying 3 example place cards (image, name, description, link).
+
     - [ ] Add a uniform footer with copyright, social links, and contact info.
+    
 - [ ] **`places.html` (Explore Page)**
     - [ ] Add a search bar and JavaScript filter options (e.g., by category).
     - [ ] Display at least 8 places across 4 different categories using cards.
