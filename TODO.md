@@ -1,4 +1,5 @@
 # Phase 1: Web Project Description (Spring 2025/2026)
+# DEADLINE April 8th
 
 ### Project Administration & Setup
 - [ ] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
