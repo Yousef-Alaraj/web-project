@@ -1,4 +1,3 @@
-```md
 # Phase 1: Web Project Description (Spring 2025/2026)
 
 ### Project Administration & Setup
@@ -36,4 +35,3 @@
 ### Final Review & Submission
 - [ ] **Deadlines:** Submit ONE copy per team to the eLearning gateway before Wednesday, April 8th, 2026. No late submissions are accepted.
 - [ ] **Presentation Prep:** Prepare to present your work and answer coding/design questions (failing to present results in a zero).
-```
