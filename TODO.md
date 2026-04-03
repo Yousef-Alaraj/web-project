@@ -42,6 +42,7 @@
     - [ ] Use the Fetch API to dynamically display at least 5 items from a public API (e.g., upcoming events or weather).
 
     - [ ] Include a "Refresh" button that reloads the data from the API.
+    
 - [ ] **`contact.html` (Team & Form)**
     - [ ] Display your team's details (pictures, emails).
 
