@@ -2,8 +2,6 @@
 # DEADLINE April 10th
 
 ### Project Administration & Setup
-- [ ] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
-
 - [x] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
 
 - [ ] **Setup Submission Folder:** Create a folder containing the full names and university IDs of all team members.
