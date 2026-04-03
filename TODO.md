@@ -8,22 +8,26 @@
 - [ ] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
 
 ### Core HTML Pages (Minimum 5 required)
-- [ ] **`index.html` (Homepage)** (Void)
+- [ ] **`index.html` (Homepage)**
     - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with `<header>` tag)**
 
-    - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start
-          Exploring" button linking to `places.html`.
+    - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start Exploring" button linking to `places.html`.
 
-    - [ ] Create a "Featured Categories" section displaying at least 4 categories (e.g., Restaurants, Parks) with images, titles, and descriptions.
+    - [ ] Create a "Featured Categories" section displaying at least 4 categories (e.g., Restaurants, Parks) with images, titles, and descriptions. **(Possibly make every two categories on a row might be changed later)**
 
-    - [ ] Create a "Featured Places" section displaying 3 example place cards (image, name, description, link).
+    - [ ] Create a "Featured Places" section displaying 3 example place cards (image, name, description, link). **(Possibly make every two categories on a row might be changed later)**
 
     - [ ] Add a uniform footer with copyright, social links, and contact info.
     
-- [ ] **`places.html` (Explore Page)** (Void)
-    - [ ] Add a search bar and JavaScript filter options (e.g., by category).
-    - [ ] Display at least 8 places across 4 different categories using cards.
-    - [ ] *JS Requirement:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
+- [ ] **`places.html` (Explore Page)**
+    - [ ] Add a page title and short description.
+
+    - [ ] Add a search bar for places and JavaScript filter options (e.g., by category). **(No idea how to implement)**
+
+    - [ ] Display at least 8 places across 4 different categories meaning each place should belong to a category using cards with image, place name, category, short description, rating and link to `place-details.html`.
+
+    - [ ] *Optional features:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
+
 - [ ] **`place-details.html` (Single Place)** (Yousef)
     - [ ] Include the place title, category, and rating.
     - [ ] Add an Image Gallery with 2-4 images.
