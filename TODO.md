@@ -43,7 +43,7 @@
 
     - [ ] Include a "Refresh" button that reloads the data from the API.
 
-- [ ] **`contact.html` (Team & Form)**
+- [ ] **`contact.html` (Team & Form)** (Zeina)
     - [ ] Display your team's details (pictures, emails).
 
     - [ ] Build a contact form (name, email, subject, message) and validate it using JavaScript.
