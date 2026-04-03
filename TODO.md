@@ -1,5 +1,3 @@
-There is no single official standard, but a common `TODO.md` convention is:
-
 ```md
 # TODO
 
@@ -13,9 +11,3 @@ There is no single official standard, but a common `TODO.md` convention is:
 ## Done
 - [x] Initialize repository structure
 ```
-
-Common practices:
-- Use Markdown task checkboxes: `- [ ]` and `- [x]`
-- Group by status (`Backlog`, `In Progress`, `Done`) or by priority
-- Keep items action-oriented and specific
-- Optionally add owner, due date, or links to issues
