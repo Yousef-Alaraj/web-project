@@ -9,16 +9,16 @@
 - [ ] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
 
 ### Core HTML Pages (Minimum 5 required)
-- [ ] **`index.html` (Homepage)** (Void)
-    - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with `<header>` tag)**
+- [x] **`index.html` (Homepage)** (Void)
+    - [x] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with `<header>` tag)**
 
-    - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start Exploring" button linking to `places.html`.
+    - [x] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start Exploring" button linking to `places.html`.
 
-    - [ ] Create a "Featured Categories" section displaying at least 4 categories (e.g., Restaurants, Parks) with images, titles, and descriptions. **(Possibly make every two categories on a row might be changed later)**
+    - [x] Create a "Featured Categories" section displaying at least 4 categories (e.g., Restaurants, Parks) with images, titles, and descriptions. **(Possibly make every two categories on a row might be changed later)**
 
-    - [ ] Create a "Featured Places" section displaying 3 example place cards (image, name, description, link). **(Possibly make every two categories on a row might be changed later)**
+    - [x] Create a "Featured Places" section displaying 3 example place cards (image, name, description, link). **(Possibly make every two categories on a row might be changed later)**
 
-    - [ ] Add a uniform footer with copyright, social links, and contact info.
+    - [x] Add a uniform footer with copyright, social links, and contact info.
     
 - [ ] **`places.html` (Explore Page)** (Yousef)
     - [ ] Add a page title and short description.
