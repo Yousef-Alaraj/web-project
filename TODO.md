@@ -40,10 +40,19 @@
     - [ ] Build a contact form (name, email, subject, message) and validate it using JavaScript.
 
 ### Technical Standards
-- [ ] **HTML:** Use semantic tags (`<header>`, `<nav>`, `<section>`) and ensure clean structure.
+- [ ] **HTML:** Use semantic tags (`<header>`, `<nav>`, `<section>`, `<form>`) and ensure clean structure.
+
 - [ ] **CSS:** Use **external stylesheets only**. Layout the site using Flexbox or Grid, and make it responsive with media queries.
+
+- [ ] **JS:** Use search/filter and sort, include form validation, show or hide sections and store data in local storage.
+
+- [ ] **API:** Use on public API **MEANINGFULLY**.
+
 - [ ] **Accessibility (Pick at least 4):** Add image `alt` text, form labels, keyboard navigation, ARIA tags, and ensure sufficient color contrast.
 
 ### Final Review & Submission
 - [ ] **Deadlines:** Submit ONE copy per team to the eLearning gateway before Wednesday, April 8th, 2026. No late submissions are accepted.
+
 - [ ] **Presentation Prep:** Prepare to present your work and answer coding/design questions (failing to present results in a zero).
+
+- [ ] **Paths and File Linking:** It's your responsibility to ensure that all the images and files referenced in your project are included in your submission folder and linked using relative.
