@@ -29,7 +29,7 @@
 
     - [ ] *Optional features:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
 
-- [ ] **`place-details.html` (Single Place)** (Yousef)
+- [ ] **`place-details.html` (Single Place)** 
     - [ ] Include the place title, category, and rating.
 
     - [ ] Add an Image Gallery with 2-4 images.
