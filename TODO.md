@@ -3,13 +3,16 @@
 
 ### Project Administration & Setup
 - [ ] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
+
 - [ ] **Setup Submission Folder:** Create a folder containing the full names and university IDs of all team members.
+
 - [ ] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
 
-### Core Pages (Minimum 5 required)
+### Core HTML Pages (Minimum 5 required)
 - [ ] **`index.html` (Homepage)**
-    - [ ] Add the "City Explorer" title/logo and a uniform navigation menu.
-    - [ ] Build a Hero Section with a large image/banner, short intro, and a "Start Exploring" button linking to `places.html`.
+    - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with <header> tag)**
+    - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start
+          Exploring" button linking to `places.html`.
     - [ ] Create a "Featured Categories" section displaying at least 4 categories (e.g., Restaurants, Parks) with images, titles, and descriptions.
     - [ ] Create a "Featured Places" section displaying 3 example place cards (image, name, description, link).
     - [ ] Add a uniform footer with copyright, social links, and contact info.
