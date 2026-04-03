@@ -9,7 +9,7 @@
 
 ### Core HTML Pages (Minimum 5 required)
 - [ ] **`index.html` (Homepage)** (Void)
-    - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. (Banner at the top with <header> tag)
+    - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with `<header>` tag)**
 
     - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start
           Exploring" button linking to `places.html`.
