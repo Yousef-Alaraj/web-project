@@ -2,18 +2,13 @@
 # DEADLINE April 8th
 
 ### Project Administration & Setup
-<<<<<<< HEAD
 - [x] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
-=======
-- [ ] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
-
->>>>>>> d021dabc493b65077d759932acaddd7f3dfca6a6
 - [ ] **Setup Submission Folder:** Create a folder containing the full names and university IDs of all team members.
 
 - [ ] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
 
 ### Core HTML Pages (Minimum 5 required)
-- [ ] **`index.html` (Homepage)**
+- [ ] **`index.html` (Homepage)** (Void)
     - [ ] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with <header> tag)**
 
     - [ ] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start
@@ -25,11 +20,11 @@
 
     - [ ] Add a uniform footer with copyright, social links, and contact info.
     
-- [ ] **`places.html` (Explore Page)**
+- [ ] **`places.html` (Explore Page)** (Void)
     - [ ] Add a search bar and JavaScript filter options (e.g., by category).
     - [ ] Display at least 8 places across 4 different categories using cards.
     - [ ] *JS Requirement:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
-- [ ] **`place-details.html` (Single Place)**
+- [ ] **`place-details.html` (Single Place)** (Yousef)
     - [ ] Include the place title, category, and rating.
     - [ ] Add an Image Gallery with 2-4 images.
     - [ ] Write a description paragraph and an information section (location, hours, entry fee, contact).
