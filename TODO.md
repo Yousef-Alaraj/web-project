@@ -2,12 +2,10 @@
 # DEADLINE April 10th
 
 ### Project Administration & Setup
-<<<<<<< HEAD
 - [ ] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
 
-=======
 - [x] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
->>>>>>> c84d592843c33fba848f27f97b0eae398717932c
+
 - [ ] **Setup Submission Folder:** Create a folder containing the full names and university IDs of all team members.
 
 - [ ] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
@@ -35,14 +33,20 @@
 
 - [ ] **`place-details.html` (Single Place)** (Yousef)
     - [ ] Include the place title, category, and rating.
+
     - [ ] Add an Image Gallery with 2-4 images.
+
     - [ ] Write a description paragraph and an information section (location, hours, entry fee, contact).
-- [ ] **`discover.html` OR `events.html` (API Integration)** (Sami)
+
+- [ ] **`discover.html` OR `events.html` (API Integration)** 
     - [ ] Page Title and Short Explanation
+
     - [ ] Use the Fetch API to dynamically display at least 5 items from a public API (e.g., upcoming events or weather).
+
     - [ ] Include a "Refresh" button that reloads the data from the API.
-- [ ] **`contact.html` (Team & Form)** (Sami)
+- [ ] **`contact.html` (Team & Form)**
     - [ ] Display your team's details (pictures, emails).
+
     - [ ] Build a contact form (name, email, subject, message) and validate it using JavaScript.
 
 ### Technical Standards
