@@ -24,7 +24,7 @@ To frame your website beautifully, your top header and bottom footer should use 
 
 ```css
 header, footer {
-    background-color: #4E3C36;
+    background-color: #4B3D32;
     color: #F2E7D9;
 }
 
