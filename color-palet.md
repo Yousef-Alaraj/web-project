@@ -7,19 +7,19 @@ Here is the exact breakdown of how you should style each section to make it look
 ### 1. The Global Page (The 60% Base)
 You want the main canvas of your site to be easy to read. Let's use the lightest color from your logo as the background, and the darkest color for the text.
 * **Background:** Cream (`#F2E7D9`)
-* **Main Text:** Dark Earth (`#4E3C36`)
+* **Main Text:** Dark Earth (`#4B3D32`)
 
 ```css
 body {
     background-color: #F2E7D9; 
-    color: #4E3C36;
+    color: #4B3D32;
     font-family: Arial, sans-serif; /* Add a clean font! */
 }
 ```
 
 ### 2. Header & Footer (The 30% Secondary)
 To frame your website beautifully, your top header and bottom footer should use the dark, rich background color from your logo. It acts like a sandwich holding your content together.
-* **Background:** Dark Earth (`#4E3C36`)
+* **Background:** Dark Earth (`#4B3D32`)
 * **Text & Links:** Cream (`#F2E7D9`) or pure White (`#FFFFFF`)
 
 ```css
