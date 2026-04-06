@@ -20,6 +20,7 @@ header {
     padding: 20px;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 footer {
@@ -78,6 +79,7 @@ header ul li, footer ul li {
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
 .hero .hero-text {
@@ -85,6 +87,7 @@ header ul li, footer ul li {
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
 .categories, .places {
@@ -100,10 +103,16 @@ header ul li, footer ul li {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
 .categories-card img, .places-card img {
     width: 100%; 
     height: auto;
     border-radius: 5px;
+}
+
+.places-card:hover, .categories-card:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
 }
