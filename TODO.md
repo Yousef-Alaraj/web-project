@@ -30,9 +30,9 @@
     - [ ] *Optional features:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
 
 - [ ] **`place-details.html` (Single Place)** 
-    - [ ] Include the place title, category, and rating.
+    - [x] Include the place title, category, and rating.
 
-    - [ ] Add an Image Gallery with 2-4 images.
+    - [x] Add an Image Gallery with 2-4 images.
 
     - [ ] Write a description paragraph and an information section (location, hours, entry fee, contact).
 
