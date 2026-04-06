@@ -42,8 +42,9 @@ a:hover {
 }
 
 header #logo {
-    width: 12%;
+    width: 7%;
     height: auto;
+    padding-left: 30px;
 }
 
 header ul, footer ul {
