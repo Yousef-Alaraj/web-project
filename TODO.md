@@ -6,7 +6,7 @@
 
 - [x] **Setup Submission Folder:** Create a folder containing the full names and university IDs of all team members.
 
-- [ ] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
+- [x] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
 
 ### Core HTML Pages (Minimum 5 required)
 - [x] **`index.html` (Homepage)** (Void)
@@ -29,7 +29,7 @@
 
     - [ ] *Optional features:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
 
-- [ ] **`place-details.html` (Single Place)** 
+- [x] **`place-details.html` (Single Place)** 
     - [x] Include the place title, category, and rating.
 
     - [x] Add an Image Gallery with 2-4 images.
@@ -51,13 +51,13 @@
 ### Technical Standards
 - [ ] **HTML:** Use semantic tags (`<header>`, `<nav>`, `<section>`, `<form>`) and ensure clean structure.
 
-- [ ] **CSS:** Use **external stylesheets only**. Layout the site using Flexbox or Grid, and make it responsive with media queries.
+- [x] **CSS:** Use **external stylesheets only**. Layout the site using Flexbox or Grid, and make it responsive with media queries.
 
 - [ ] **JS:** Use search/filter and sort, include form validation, show or hide sections and store data in local storage.
 
 - [ ] **API:** Use on public API **MEANINGFULLY**.
 
-- [ ] **Accessibility (Pick at least 4):** Add image `alt` text, form labels, keyboard navigation, ARIA tags, and ensure sufficient color contrast.
+- [x] **Accessibility (Pick at least 4):** Add image `alt` text, form labels, keyboard navigation, ARIA tags, and ensure sufficient color contrast.
 
 ### Final Review & Submission
 - [ ] **Deadlines:** Submit ONE copy per team to the eLearning gateway before Wednesday, April 8th, 2026. No late submissions are accepted.
