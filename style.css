@@ -101,60 +101,113 @@ footer ul li {
     gap: 20px;
 }
 
-.places-card,
-.categories-card {
+.places-card, .categories-card {
     background-color: #FFFFFF;
     border: 1px solid #B59A7A;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
-.categories-card img,
-.places-card img {
-    width: 100%;
+.categories-card img, .places-card img {
+    width: 100%; 
     height: auto;
     border-radius: 5px;
+    box-sizing: border-box;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 
+.places-card:hover, .categories-card:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
 
+/* PLACE-DETAILS */
 
-/* CONTACT CSS */
-
-.teamINFO {
+.place-details-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 40px 20px;
+    font-size: 20px;
 }
 
-.teamCard {
-    flex: 1;
-    max-width: 300px;
-}
-
-.teamIMG {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-}
-
-.contactForm {
+.gallery {
     display: grid;
-    gap: 15px;
-    max-width: 600px;
-    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+    gap: 20px;
+    justify-items: center;
 }
 
-.submitBtn {
+.gallery img {
+    background-color: #FFFFFF;
+    border: 1px solid #B59A7A;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
 
-    padding: 12px;
-    background-color: #4B3D32;
-    color: white;
-    border: none;
-    cursor: pointer;
+.gallery img:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
 
+.place-info ul {
+    list-style-type: none;
+}
+
+.details {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+
+/* MOBILE AND IPAD RESPONSIVENESS */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    header #logo {
+        width: 20%;
+        padding-left: 0;
+    }
+
+    .categories, .places, .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery img {
+        width: 95%; 
+    }
+}
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    header #logo {
+        width: 20%;
+        padding-left: 0;
+    }
+
+    .categories, .places, .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery img {
+        width: 95%; 
+    }
 }
