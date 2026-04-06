@@ -18,6 +18,8 @@ header {
     background-color: #4B3D32;
     color: #F2E7D9;
     padding: 20px;
+    position: sticky;
+    top: 0;
 }
 
 footer {
