@@ -101,17 +101,19 @@ footer ul li {
     gap: 20px;
 }
 
-.places-card, .categories-card {
+.places-card,
+.categories-card {
     background-color: #FFFFFF;
     border: 1px solid #B59A7A;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
-.categories-card img, .places-card img {
-    width: 100%; 
+.categories-card img,
+.places-card img {
+    width: 100%;
     height: auto;
     border-radius: 5px;
     box-sizing: border-box;
@@ -119,7 +121,8 @@ footer ul li {
     object-fit: cover;
 }
 
-.places-card:hover, .categories-card:hover {
+.places-card:hover,
+.categories-card:hover {
     transform: scale(1.01);
     transition: 0.3s ease-in-out;
 }
@@ -148,8 +151,8 @@ footer ul li {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
-    width: 100%; 
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
     height: auto;
     border-radius: 5px;
     box-sizing: border-box;
@@ -178,36 +181,80 @@ footer ul li {
         flex-direction: column;
         padding: 10px;
     }
-    
+
     header #logo {
         width: 20%;
         padding-left: 0;
     }
 
-    .categories, .places, .gallery {
+    .categories,
+    .places,
+    .gallery {
         grid-template-columns: 1fr;
     }
-    
+
     .gallery img {
-        width: 95%; 
+        width: 95%;
     }
 }
+
 @media (max-width: 900px) {
     header {
         flex-direction: column;
         padding: 10px;
     }
-    
+
     header #logo {
         width: 20%;
         padding-left: 0;
     }
 
-    .categories, .places, .gallery {
+    .categories,
+    .places,
+    .gallery {
         grid-template-columns: 1fr;
     }
-    
+
     .gallery img {
-        width: 95%; 
+        width: 95%;
     }
+}
+
+/* CONTACT CSS */
+
+.teamINFO {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.teamCard {
+    flex: 1;
+    max-width: 300px;
+}
+
+.teamIMG {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.contactForm {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.submitBtn {
+
+    padding: 12px;
+    background-color: #4B3D32;
+    color: white;
+    border: none;
+    cursor: pointer;
+
 }
