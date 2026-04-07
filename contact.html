@@ -57,14 +57,15 @@
 
     <section>
         <h2>Get in touch</h2>
-        <form class="contactForm">
-            <input type="text" placeholder="Name" style="padding: 12px;">
+        <form class="contactForm" id="contact-form">
+            <input type="text" placeholder="Name" style="padding: 12px;" id="user-name">
 
-            <input type="email" placeholder="Email" style="padding: 12px;">
+            <input type="email" placeholder="Email" style="padding: 12px;" id="user-email">
 
-            <input type="text" placeholder="Subject" style="padding: 12px;">
+            <input type="text" placeholder="Subject" style="padding: 12px;" id="user-sub">
 
-            <textarea placeholder="Message" style=" padding: 12px; border: 1px solid #ccc;"></textarea>
+            <textarea placeholder="Message" style=" padding: 12px; border: 1px solid #ccc;"
+                id="user-message"></textarea>
             <button class="submitBtn" type="submit">Send</button>
         </form>
     </section>
@@ -84,6 +85,7 @@
             </ul>
         </div>
     </footer>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
