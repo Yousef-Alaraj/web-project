@@ -43,10 +43,10 @@
 
     - [ ] Include a "Refresh" button that reloads the data from the API.
 
-- [ ] **`contact.html` (Team & Form)** (Zeina)
-    - [ ] Display your team's details (pictures, emails).
+- [x] **`contact.html` (Team & Form)** (Zeina)
+    - [x] Display your team's details (pictures, emails).
 
-    - [ ] Build a contact form (name, email, subject, message) and validate it using JavaScript.
+    - [x] Build a contact form (name, email, subject, message) and validate it using JavaScript.
 
 ### Technical Standards
 - [ ] **HTML:** Use semantic tags (`<header>`, `<nav>`, `<section>`, `<form>`) and ensure clean structure.
