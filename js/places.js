@@ -8,7 +8,7 @@ const jordanDestinations = [
         location: "Country-wide",
         description: `The Jordan Trail is a ~675km long-distance hiking route traversing Jordan from Um Qais in the north to Aqaba on the Red Sea in the south. Completed in roughly 35–40 days, the trail crosses diverse landscapes—including northern forests, rugged wadis, Petra, and Wadi Rum—while passing through 75 villages to showcase local culture, cuisine, and history.`,
         tags: ["hiking", "nature", "outdoor"],
-        rating: 4.8,
+        rating: 3.8,
         tripDuration: "35-40 days (full trail)",
         fee: "Free (unguided)",
         contactNumber: "+962 6 461 3234",
@@ -27,7 +27,7 @@ const jordanDestinations = [
         location: "Various Locations",
         description: `Jordan BirdWatch (JBW) is a registered Jordanian association dedicated to protecting wild birds and their habitats through science-based conservation, monitoring, and awareness. Founded by ornithologists and conservationists, JBW promotes eco-tourism, conducts field research, provides capacity building for guides, and works with local communities to conserve bird populations.`,
         tags: ["wildlife", "conservation", "eco-tourism"],
-        rating: 4.5,
+        rating: 2.5,
         tripDuration: "Half-day to multi-day tours",
         fee: "Varies by tour package",
         contactNumber: "+962 7 9123 4567",
@@ -48,7 +48,7 @@ const jordanDestinations = [
         location: "Ma'an Governorate",
         description: `Petra is a renowned UNESCO World Heritage site and "New Seven Wonders of the World" location in southern Jordan. Founded over 2,000 years ago by the Nabataeans, it is a magnificent desert city carved directly into vibrant rose-red sandstone cliffs, showcasing Hellenistic architecture like the Treasury (Al-Khazneh) and ancient water management systems.`,
         tags: ["archaeology", "unesco", "nabataean"],
-        rating: 4.9,
+        rating: 3.9,
         tripDuration: "1 to 3 days",
         fee: "50 JOD (1-day pass)",
         contactNumber: "+962 3 215 6060",
@@ -67,7 +67,7 @@ const jordanDestinations = [
         location: "Jerash Governorate",
         description: `Jerash, located 30 miles north of Amman, houses one of the world's best-preserved Roman provincial cities. Known as "Pompeii of the East," the ruins feature a colonnaded Oval Plaza, two massive theaters, the Temple of Artemis, and the 800m-long Cardo Maximus, all buried by sand for centuries.`,
         tags: ["roman ruins", "ancient city", "architecture"],
-        rating: 4.7,
+        rating: 3.7,
         tripDuration: "3 to 4 hours",
         fee: "10 JOD",
         contactNumber: "+962 2 634 1234",
@@ -86,7 +86,7 @@ const jordanDestinations = [
         categoryId: "leisure-wellness",
         categoryName: "Leisure & Wellness",
         location: "Jordan Rift Valley",
-        description: `The Dead Sea is a hypersaline lake bordered by Jordan and Israel, renowned as the lowest point on Earth (over 400m below sea level). Known for its extreme salinity—roughly 10 times saltier than the ocean—it allows for effortless floating and features therapeutic mineral-rich mud. Its waterless, barren landscape attracts tourists for wellness tourism and health benefits.`,
+        description: `The Dead Sea is a hypersaline lake that runs through Jordan, renowned as the lowest point on Earth (over 400m below sea level). Known for its extreme salinity—roughly 10 times saltier than the ocean—it allows for effortless floating and features therapeutic mineral-rich mud. Its waterless, barren landscape attracts tourists for wellness tourism and health benefits.`,
         tags: ["spa", "relaxation", "lowest point"],
         rating: 4.6,
         tripDuration: "Half-day to 1 day",
@@ -145,7 +145,7 @@ const jordanDestinations = [
         categoryId: "religious-faith",
         categoryName: "Religious & Faith",
         location: "Balqa Governorate",
-        description: `The Jordan River is a 251-kilometer-long (156-mile) river in the Middle East flowing south from Mount Hermon through the Sea of Galilee to the Dead Sea, forming a major, low-elevation geopolitical boundary. As the world's lowest river, it is a vital, historically significant water source for Israel, Jordan, and Palestine, deeply sacred to Christians, Jews, and Muslims.`,
+        description: `The Jordan River is a 251-kilometer-long (156-mile) river in the Middle East flowing south from Mount Hermon through the Sea of Galilee to the Dead Sea, forming a major, low-elevation geopolitical boundary. As the world's lowest river, it is a vital, historically significant water source for Jordan and Palestine, deeply sacred to Christians, Jews, and Muslims.`,
         tags: ["christianity", "baptism site", "unesco"],
         rating: 4.8,
         tripDuration: "2 to 3 hours",
@@ -160,10 +160,9 @@ const jordanDestinations = [
     }
 ];
 
-
 function card(props) {
     return `
-    <div class="card">
+    <div class="card" id="${props.id}">
         <h3 class="place-name">${props.name}</h3>
         <img src="${props.images[0]}" alt="${props.name}" ">
         <div class="place-info">
@@ -182,8 +181,170 @@ function card(props) {
 
 const cardsContainer = document.querySelector(".cards-container");
 
-// Using a for...of loop is cleaner for arrays!
+
 for (let destination of jordanDestinations) {
     // We add the HTML string to the container's innerHTML
     cardsContainer.innerHTML += card(destination);
 }
+
+
+
+
+
+
+function search(value){
+    // let container=querySelector(".cards-container")
+
+    const irrelevantKeys = ["id", "images","contactNumber"];
+    
+    for (let index=1;index<jordanDestinations.length+1;index++){
+        let flag=false
+
+       
+        for (key in jordanDestinations[index-1]){
+
+            if (irrelevantKeys.includes(key)){
+                continue
+            }
+           
+
+            let content = String(jordanDestinations[index-1][key]); 
+            
+            if (content.toLowerCase().includes(value.toLowerCase())) {
+                flag = true;
+            }   
+
+
+        }
+        let element=document.getElementById(`${index}`)
+        if (flag==false){
+            
+            element.classList.add("not-found")
+
+
+        }else{
+
+            element.classList.remove("not-found")
+        }
+}
+
+
+}
+
+let searchBar=document.querySelector(".search-bar")
+
+searchBar.addEventListener("input", (e) => {
+    search(e.target.value);
+});
+
+let categories={
+    "adventure & eco":false,
+    "history & culture":false,
+    "leisure & wellness":false,
+    "religious & faith":false
+}
+
+
+
+
+
+function categoryCheck(){
+
+    flag=true;
+    for (key in categories){
+        if (categories[key]==true){
+            flag=false
+        }
+
+    }
+    
+    
+
+    for(let i=1;i<jordanDestinations.length+1;i++){
+        let element=document.getElementById(`${i}`)
+        
+        let c=jordanDestinations[i-1]["categoryName"].toLowerCase()
+        if (categories[c]||flag){
+            element.classList.remove("remove")
+
+        }else{
+            element.classList.add("remove")
+        }
+         
+
+        
+    }
+}
+
+let categoryCheckbox=document.querySelectorAll("input[name=category]")
+
+for (let j=0;j<categoryCheckbox.length;j++){
+    categoryCheckbox[j].addEventListener("click",(e)=>{
+        
+        if (e.target.checked){
+            categories[e.target.value.toLowerCase()]=true
+            
+        }else{
+            categories[e.target.value.toLowerCase()]=false
+        }
+        categoryCheck()
+    })
+
+}
+
+
+
+let ratings={
+    "1":false,
+    "2":false,
+    "3":false,
+    "4":false,
+    "5":false
+}
+
+
+function ratingCheck(){
+
+    flag=true;
+    for (key in ratings){
+        if (ratings[key]==true){
+            flag=false
+        }
+
+    }
+    
+    
+
+    for(let i=1;i<jordanDestinations.length+1;i++){
+        let element=document.getElementById(`${i}`)
+        
+        let c=jordanDestinations[i-1]["rating"]|0
+        if (ratings[c]||flag){
+            element.classList.remove("remove2")
+
+        }else{
+            element.classList.add("remove2")
+        }
+         
+
+        
+    }
+}
+
+let ratingCheckbox=document.querySelectorAll("input[name=rating]")
+
+for (let j=0;j<ratingCheckbox.length;j++){
+    ratingCheckbox[j].addEventListener("click",(e)=>{
+        
+        if (e.target.checked){
+            ratings[e.target.value]=true
+            
+        }else{
+            ratings[e.target.value]=false
+        }
+        ratingCheck()
+    })
+
+}
+
+

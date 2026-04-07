@@ -131,8 +131,8 @@ hr{
     background-color: #4B3D32;
     color: whitesmoke;
     padding: 15px;
-    flex:0 0 12%;
-    width: 12%;
+    flex:0 0 18%;
+    width: 18%;
     display:flex;
     flex-direction: column;
 
@@ -149,6 +149,11 @@ hr{
 input[type=checkbox]{
     accent-color:whitesmoke ;
 }
+
+input[type=radio]{
+    accent-color: #FFC107;
+}
+
 .place-cards{
     position: relative;
    
@@ -160,10 +165,10 @@ input[type=checkbox]{
     
     /* position: absolute; */
     left: 0;
-    width:17%;
-    margin-left: 35px;
-    margin-top: 35px;
-    margin-bottom: 10px;
+    width:14vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
     border-radius: 15px;
     border: none;
 
@@ -217,7 +222,13 @@ input[type=checkbox]{
    
 }
 
+p{
+    font-size: small;
+}
 
+.filters label{
+    font-size: smaller;
+}
 footer {
     text-align:center;
     background-color: #4B3D32;
@@ -246,3 +257,59 @@ footer ul li {
     font-size: 20px;
 }
 
+
+
+.not-found{
+    display: none;
+}
+
+.remove{
+    display: none;
+}
+.remove2{
+    display: none;
+}
+
+@media (max-width:1000px){
+    body{
+        font-size: small;
+    }
+    .cards-container{
+        grid-template-columns: repeat(1,1fr);
+        /* font-size: smaller; */
+        
+    
+    }
+    .filters{
+        flex:0 0 25%;
+        width: 25%;
+        /* font-size: smaller; */
+        
+    }
+}
+
+
+
+
+
+
+@media (max-width:600px){
+    body{
+        font-size: small;
+    }
+    .cards-container{
+        grid-template-columns: repeat(1,1fr);
+        /* font-size: smaller; */
+        
+    
+    }
+    h1{
+        font-size: medium;
+    }
+    .filters{
+        flex:0 0 25%;
+        width: 25%;
+        /* font-size: smaller; */
+        
+    }
+}
