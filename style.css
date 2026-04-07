@@ -258,3 +258,18 @@ footer ul li {
     cursor: pointer;
 
 }
+
+.contactFormTextarea {
+    padding: 12px;
+    border: 1.5px solid #cccccc;
+}
+
+.contactFormInput {
+    padding: 12px;
+    border: 1.5px solid #cccccc;
+
+}
+
+.mail {
+    color: #4E3C36;
+}

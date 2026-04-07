@@ -18,6 +18,17 @@ f.onsubmit = function (e) {
         return;
     }
 
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (emailVal == "") {
+        alert("Please enter your email");
+        return;
+    }
+    if (emailPattern.test(emailVal) == false) {
+        alert("Please enter a valid email format (e.g., name@example.com)");
+        return;
+    }
+
     if (emailVal.indexOf("@") == -1) {
         alert("There must be @ in your email");
         return;
