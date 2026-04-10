@@ -1,5 +1,5 @@
 # Phase 1: Web Project Description (Spring 2025/2026)
-# DEADLINE April 10th
+# DEADLINE April 11th
 
 ### Project Administration & Setup
 - [x] **Form a team:** Group up with 2-3 other students (max 4 per team) from your exact section to avoid a 2-point penalty.
@@ -20,14 +20,14 @@
 
     - [x] Add a uniform footer with copyright, social links, and contact info.
     
-- [ ] **`places.html` (Explore Page)** (Yousef)
-    - [ ] Add a page title and short description.
+- [x] **`places.html` (Explore Page)** (Yousef)
+    - [x] Add a page title and short description.
 
-    - [ ] Add a search bar for places and JavaScript filter options (e.g., by category). **(No idea how to implement)**
+    - [x] Add a search bar for places and JavaScript filter options (e.g., by category). **(No idea how to implement)**
 
-    - [ ] Display at least 8 places across 4 different categories meaning each place should belong to a category using cards with image, place name, category, short description, rating and link to `place-details.html`.
+    - [x] Display at least 8 places across 4 different categories meaning each place should belong to a category using cards with image, place name, category, short description, rating and link to `place-details.html`.
 
-    - [ ] *Optional features:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
+    - [-] *Optional features:* Implement an "Add to Favorites" button using `localStorage` and a sorting feature.
 
 - [x] **`place-details.html` (Single Place)** 
     - [x] Include the place title, category, and rating.
@@ -49,11 +49,11 @@
     - [x] Build a contact form (name, email, subject, message) and validate it using JavaScript.
 
 ### Technical Standards
-- [ ] **HTML:** Use semantic tags (`<header>`, `<nav>`, `<section>`, `<form>`) and ensure clean structure.
+- [x] **HTML:** Use semantic tags (`<header>`, `<nav>`, `<section>`, `<form>`) and ensure clean structure.
 
 - [x] **CSS:** Use **external stylesheets only**. Layout the site using Flexbox or Grid, and make it responsive with media queries.
 
-- [ ] **JS:** Use search/filter and sort, include form validation, show or hide sections and store data in local storage.
+- [x] **JS:** Use search/filter and sort, include form validation, show or hide sections and store data in local storage.
 
 - [ ] **API:** Use on public API **MEANINGFULLY**.
 
@@ -64,4 +64,4 @@
 
 - [ ] **Presentation Prep:** Prepare to present your work and answer coding/design questions (failing to present results in a zero).
 
-- [ ] **Paths and File Linking:** It's your responsibility to ensure that all the images and files referenced in your project are included in your submission folder and linked using relative.
+- [x] **Paths and File Linking:** It's your responsibility to ensure that all the images and files referenced in your project are included in your submission folder and linked using relative.
