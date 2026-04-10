@@ -36,12 +36,12 @@
 
     - [ ] Write a description paragraph and an information section (location, hours, entry fee, contact).
 
-- [ ] **`discover.html` (API Integration)** (Sami)
-    - [ ] Page Title and Short Explanation
+- [x] **`discover.html` (API Integration)** (Sami)
+    - [x] Page Title and Short Explanation
 
-    - [ ] Use the Fetch API to dynamically display at least 5 items from a public API (e.g., upcoming events or weather).
+    - [x] Use the Fetch API to dynamically display at least 5 items from a public API (e.g., upcoming events or weather).
 
-    - [ ] Include a "Refresh" button that reloads the data from the API.
+    - [x] Include a "Refresh" button that reloads the data from the API.
 
 - [ ] **`contact.html` (Team & Form)** (Zeina)
     - [ ] Display your team's details (pictures, emails).
