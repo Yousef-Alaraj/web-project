@@ -115,7 +115,6 @@ footer ul li {
     width: 100%;
     height: auto;
     border-radius: 5px;
-<<<<<<< HEAD
     box-sizing: border-box;
     aspect-ratio: 4 / 3;
     object-fit: cover;
@@ -272,12 +271,12 @@ footer ul li {
 
 .mail {
     color: #4E3C36;
-=======
 }
 
 /*discover*/
 #eventsContainer {
     display: grid;
+    justify-self: center;
     grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     grid-template-rows: repeat(2, auto);   /* ONLY 2 rows */
     gap: 20px;
@@ -299,5 +298,4 @@ footer ul li {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
->>>>>>> sami
 }
