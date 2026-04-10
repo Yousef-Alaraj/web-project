@@ -55,7 +55,7 @@
 
 - [x] **JS:** Use search/filter and sort, include form validation, show or hide sections and store data in local storage.
 
-- [ ] **API:** Use on public API **MEANINGFULLY**.
+- [x] **API:** Use on public API **MEANINGFULLY**.
 
 - [x] **Accessibility (Pick at least 4):** Add image `alt` text, form labels, keyboard navigation, ARIA tags, and ensure sufficient color contrast.
 
