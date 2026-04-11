@@ -9,7 +9,7 @@
 - [x] **Asset Management:** Ensure all images and files are included in your folder and linked using relative paths.
 
 ### Core HTML Pages (Minimum 5 required)
-- [x] **`index.html` (Homepage)** (Void)
+- [x] **`index.html` (Homepage)**
     - [x] Add the "City Explorer" title/logo and a uniform navigation menu. **(Banner at the top with `<header>` tag)**
 
     - [x] Build a Hero **Section** with a large image/banner, short intro **(2 - 3 sentences)**, and a "Start Exploring" button linking to `places.html`.
@@ -20,7 +20,7 @@
 
     - [x] Add a uniform footer with copyright, social links, and contact info.
     
-- [x] **`places.html` (Explore Page)** (Yousef)
+- [x] **`places.html` (Explore Page)** 
     - [x] Add a page title and short description.
 
     - [x] Add a search bar for places and JavaScript filter options (e.g., by category). **(No idea how to implement)**
@@ -36,14 +36,14 @@
 
     - [x] Write a description paragraph and an information section (location, hours, entry fee, contact).
 
-- [x] **`discover.html` (API Integration)** (Sami)
+- [x] **`discover.html` (API Integration)** 
     - [x] Page Title and Short Explanation
 
     - [x] Use the Fetch API to dynamically display at least 5 items from a public API (e.g., upcoming events or weather).
 
     - [x] Include a "Refresh" button that reloads the data from the API.
 
-- [x] **`contact.html` (Team & Form)** (Zeina)
+- [x] **`contact.html` (Team & Form)** 
     - [x] Display your team's details (pictures, emails).
 
     - [x] Build a contact form (name, email, subject, message) and validate it using JavaScript.
@@ -60,8 +60,8 @@
 - [x] **Accessibility (Pick at least 4):** Add image `alt` text, form labels, keyboard navigation, ARIA tags, and ensure sufficient color contrast.
 
 ### Final Review & Submission
-- [ ] **Deadlines:** Submit ONE copy per team to the eLearning gateway before Wednesday, April 8th, 2026. No late submissions are accepted.
+- [x] **Deadlines:** Submit ONE copy per team to the eLearning gateway before Wednesday, April 8th, 2026. No late submissions are accepted.
 
-- [ ] **Presentation Prep:** Prepare to present your work and answer coding/design questions (failing to present results in a zero).
+- [x] **Presentation Prep:** Prepare to present your work and answer coding/design questions (failing to present results in a zero).
 
 - [x] **Paths and File Linking:** It's your responsibility to ensure that all the images and files referenced in your project are included in your submission folder and linked using relative.
