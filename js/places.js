@@ -169,9 +169,13 @@ function card(props) {
             <span class="category">${props.categoryName}</span> 
             <span class="rating">${props.rating} ⭐</span>
         </div>
-    
+
+        <div class="place-bottom"> 
         <p>${props.description}</p>
+        <br>
         <a href="place-details.html?id=${props.id}">view details</a>
+        </div>
+
         
 
       

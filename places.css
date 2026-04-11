@@ -19,6 +19,7 @@ a {
 
 header {
     display: flex;
+   
     justify-content: space-between;
     align-items: center;
     background-color: #4B3D32;
@@ -65,12 +66,22 @@ footer a:hover {
     transition: color 0.3s ease-in-out;
 }
 
-
+h1{
+    font-size: 3.4vw;
+}
 
 .hero {
     display: flex;
-    height: 58%;
+    height: 34vw;
     width: 100%;
+}
+
+.hero p{
+    font-size: 1.3vw;
+}
+
+.card p{
+    font-size:1vw
 }
 
 .hero h1{
@@ -93,7 +104,7 @@ footer a:hover {
 }
 .background-img{
     
-
+    width:50%;
     flex: 1;
     display: inline-block;
     
@@ -192,6 +203,12 @@ input[type=radio]{
     text-align: center;
     border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    /* height: auto; */
+
+    display: flex;
+    flex-direction: column;
+
 }
 
 .card img{
@@ -210,6 +227,9 @@ input[type=radio]{
 }
 
 .card p{
+
+    margin-top: 4vw;
+    padding-bottom: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,9 +242,10 @@ input[type=radio]{
    
 }
 
-p{
-    font-size: small;
-}
+
+
+
+
 
 .filters label{
     font-size: smaller;
@@ -270,9 +291,19 @@ footer ul li {
     display: none;
 }
 
-@media (max-width:1000px){
-    body{
-        font-size: small;
+@media (max-width:900px){
+    /* body{
+        font-size: medium;
+    } */
+    /* p{
+        font-size: medium;
+    } */
+    /* p{
+        font-size: 1vw;
+    } */
+
+    .card p{
+        font-size: 1.5vw;
     }
     .cards-container{
         grid-template-columns: repeat(1,1fr);
@@ -294,18 +325,24 @@ footer ul li {
 
 
 @media (max-width:600px){
-    body{
+    /* body{
         font-size: small;
-    }
+    } */
     .cards-container{
         grid-template-columns: repeat(1,1fr);
         /* font-size: smaller; */
         
     
     }
-    h1{
+
+      
+   
+    /* p{
+        font-size:2vw ;
+    } */
+    /* h1{
         font-size: medium;
-    }
+    } */
     .filters{
         flex:0 0 25%;
         width: 25%;
