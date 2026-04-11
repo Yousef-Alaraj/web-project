@@ -50,9 +50,9 @@ function getFacts(name) {
 async function displayEvents(events) {
   container.innerHTML = "";
 
-  for (let event of events) {
+  for (let i = 0; i < events.length; i++) {
+    const event = events[i];
     const venue = event._embedded.venues[0];
-
     const lat = venue.location ? venue.location.latitude : null;
     const lon = venue.location ? venue.location.longitude : null;
 
@@ -68,8 +68,6 @@ async function displayEvents(events) {
       <p><b>Date:</b> ${event.dates.start.localDate}</p>
       <p><b>Location:</b> ${venue.name}</p>
       <p><b>Weather:</b> ${weather}</p>
-
-
       <p><b>Fun Facts:</b></p>
         ${facts.map(f => `<p>${f}</p>`).join("")}
     `;
