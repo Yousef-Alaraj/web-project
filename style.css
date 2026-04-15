@@ -181,9 +181,7 @@ footer ul li {
     display: grid;
     justify-self: center;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 cards per row */
     grid-template-rows: repeat(2, auto);
-    /* ONLY 2 rows */
     gap: 20px;
     padding: 20px;
 }
