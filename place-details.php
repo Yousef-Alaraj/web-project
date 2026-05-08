@@ -1,23 +1,17 @@
 <?php
-// 1. Start the session and connect to the database
 session_start();
 require_once 'db_config.php';
 
-// 2. Check if an ID is in the URL
 if (isset($_GET['id'])) {
     $place_id = $_GET['id'];
     
-    // 3. Write the SQL query (we use a ? for security)
     $sql = "SELECT * FROM places WHERE id = ?";
     
-    // 4. Prepare and execute the query safely
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$place_id]); // This swaps the ? with the actual ID number
+    $stmt->execute([$place_id]);
     
-    // 5. Fetch the single row of data from the database
     $place = $stmt->fetch();
     
-    // 6. If the ID doesn't exist in the database, send them back home
     if (!$place) {
         header("Location: index.php");
         exit();
@@ -54,26 +48,37 @@ if (isset($_GET['id'])) {
 
         <main class="place-details-container">
             <section class="title">
-                <h2 id="place-title">Loading Title...</h2>
-                <h3 id="place-category">Loading Category...</h3>
-                <p><span id="place-rating">#</span>/5🌟 Stars</p>
+                <h2><?php echo $place['name']; ?></h2>
+                <h3><?php echo $place['category_name']; ?></h3>
+                <p><?php echo $place['rating']?>/5</p>
             </section>
     
-            <h2 id="pictures-featuring">Pictures featuring <span id="gallery-title-name">#</span></h2>
+            <h2 id="pictures-featuring">Pictures featuring <?php echo $place['name']; ?></h2>
             <section class="gallery" id="place-gallery">
+                <?php
+                $imagesArray = json_decode($place['images'], true);
+
+                if ($imagesArray) {
+                    foreach ($imagesArray as $imagePath) {
+                        echo "<img src='" . $imagePath . "' alt='Picture of " . $place['name'] . "'>";
+                    }
+                } else {
+                    echo "<p>No images available.</p>";
+                }
+                ?>
             </section>
     
             <section class="details">
-                <p id="place-description">Loading description...</p>
+                <p><?php echo $place['description']; ?></p>
                     
                 <div class="place-info">
                     <h3>Visitor Information</h3>
                     <ul>
-                        <li><strong>📍 Location:</strong> <span id="info-location">...</span></li>
-                        <li><strong>🕒 Duration:</strong> <span id="info-duration">...</span></li>
-                        <li><strong>🎟️ Entry Fee:</strong> <span id="info-fee">...</span></li>
-                        <li><strong>📞 Contact:</strong> <span id="info-contact">...</span></li>
-                        <li><strong>🏷️ Tags:</strong> <span id="info-tags">...</span></li>
+                        <li><strong>📍 Location:</strong> <?php echo $place['location']; ?></li>
+                        <li><strong>🕒 Duration:</strong> <?php echo $place['trip_duration']?></li>
+                        <li><strong>🎟️ Entry Fee:</strong> <?php echo $place['fee']?></li>
+                        <li><strong>📞 Contact:</strong> <?php echo $place['contact_number']?></li>
+                        <li><strong>🏷️ Tags:</strong> <?php echo $place['tags']?></li>
                     </ul>
                 </div>
             </section>
