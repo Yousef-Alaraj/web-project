@@ -1,3 +1,34 @@
+<?php
+// 1. Start the session and connect to the database
+session_start();
+require_once 'db_config.php';
+
+// 2. Check if an ID is in the URL
+if (isset($_GET['id'])) {
+    $place_id = $_GET['id'];
+    
+    // 3. Write the SQL query (we use a ? for security)
+    $sql = "SELECT * FROM places WHERE id = ?";
+    
+    // 4. Prepare and execute the query safely
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$place_id]); // This swaps the ? with the actual ID number
+    
+    // 5. Fetch the single row of data from the database
+    $place = $stmt->fetch();
+    
+    // 6. If the ID doesn't exist in the database, send them back home
+    if (!$place) {
+        header("Location: index.php");
+        exit();
+    }
+    
+} else {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -46,8 +77,20 @@
                     </ul>
                 </div>
             </section>
-            
         </main>
+
+        <section class="reviews-section">
+            <h3>Leave a Review</h3>
+            <form class="review-form" method="POST" action="submit_review.php">
+                <textarea name="user_review" placeholder="Write your feedback here..." rows="4" required></textarea>
+                <button type="submit" class="submitBtn">Submit Review</button>
+            </form>
+            
+            <h3>Recent Reviews</h3>
+            <div id="reviews-list">
+                <p><em>Loading reviews...</em></p>
+            </div>
+        </section>
 
         <footer>
             <h3>&copy; 2026 Jordan Visitor Guide</h3>

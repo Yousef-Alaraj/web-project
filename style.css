@@ -176,6 +176,18 @@ footer ul li {
     padding-right: 25%;
 }
 
+.review-form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.review-form textarea {
+    padding: 12px;
+    border: 1.5px solid #cccccc;
+}
+
 /*discover*/
 #eventsContainer {
     display: grid;
@@ -242,6 +254,18 @@ footer ul li {
 
     .event h2 {
         font-size: 18px;
+    }
+
+    .review-form {
+        width: 75%;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .review-form textarea {
+        padding: 10px;
+        font-size: 14px;
     }
 }
 
