@@ -50,7 +50,7 @@ if (isset($_GET['id'])) {
             <section class="title">
                 <h2><?php echo $place['name']; ?></h2>
                 <h3><?php echo $place['category_name']; ?></h3>
-                <p><?php echo $place['rating']?>/5</p>
+                <p><?php echo $place['rating']?>/5🌟</p>
             </section>
     
             <h2 id="pictures-featuring">Pictures featuring <?php echo $place['name']; ?></h2>
