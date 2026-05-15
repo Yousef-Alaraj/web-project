@@ -52,6 +52,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
     <section>
         <h2>Login</h2>
+
+        <?php if (isset($_SESSION['success_message'])): ?>
+            <p style="color: green; font-weight: bold; text-align: center; margin-bottom: 15px;">
+                <?php
+                echo $_SESSION['success_message'];
+                unset($_SESSION['success_message']);
+                ?>
+            </p>
+        <?php endif; ?>
+
         <form class="contactForm" method="POST" action="login.php">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" class="contactFormInput" required>
