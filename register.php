@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="assets/images/logo.jpg" alt="Jordan Visitor Guide Logo" id="logo">
         <nav>
             <ul id="navigation">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="contact.php" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
     </header>
