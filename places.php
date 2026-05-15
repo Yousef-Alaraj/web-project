@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="places.css">
 
     
-    <script src="js/places.js" defer></script>
+    <!-- <script src="js/places.js" defer></script> -->
+     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="js/places.js"></script>
 
 </head>
 <body>
@@ -101,6 +108,16 @@
                     5 ⭐⭐⭐⭐⭐
                     <input type="checkbox" name="rating" value="5">
                 </label>
+            </div>
+            <hr>
+            <div >
+            <span>favourites:</span>
+            <br>
+            <br>
+            <label>
+                    show favourites
+                    <input name="favourites" type="checkbox" value="favourites" id="favouritesCheckbox">
+            </label>
             </div>
 
 
