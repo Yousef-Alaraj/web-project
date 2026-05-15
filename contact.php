@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once 'db_config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+    <title>Contactt</title>
 </head>
 
 <body>
@@ -14,14 +19,19 @@
 
         <nav>
             <ul id="navigation">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="places.html" class="nav-link">Places</a></li>
-                <li><a href="discover.html" class="nav-link">Discover</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="places.php" class="nav-link">Places</a></li>
+                <li><a href="discover.php" class="nav-link">Discover</a></li>
+                <li><a href="contact.php" class="nav-link">Contact Us</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="dashboard.php" class="nav-link">Dashboard</a></li>
+                    <li><a href="logout.php" class="nav-link">Logout</a></li>
+                <?php else: ?>
+                    <li><a href="login.php" class="nav-link">Login / Register</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
-
     <section id="teamSec">
         <h2>Our Team</h2>
         <div class="teamINFO">
