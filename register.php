@@ -10,12 +10,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$user, $email, $pass]);
+    $checkSql = "SELECT * FROM users WHERE username = ? OR email = ?";
+    $checkStmt = $pdo->prepare($checkSql);
+    $checkStmt->execute([$user, $email]);
+    $existingUser = $checkStmt->fetch();
 
-    header("Location: login.php");
-    exit();
+    if ($existingUser) {
+
+        if ($existingUser['username'] === $user) {
+            $error = "This username is already taken.";
+        } elseif ($existingUser['email'] === $email) {
+            $error = "This email is already in use.";
+        }
+    } else {
+
+        $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$user, $email, $pass]);
+
+        $_SESSION['success_message'] = "Account created successfully! Please log in.";
+
+        header("Location: login.php");
+        exit();
+    }
 }
 ?>
 
@@ -51,6 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section>
         <h2>Create an Account</h2>
+
+        <?php if (!empty($error)): ?>
+            <p style="color: red; font-weight: bold; text-align: center; margin-bottom: 15px;">
+                <?php echo $error; ?>
+            </p>
+        <?php endif; ?>
+
         <form class="contactForm" method="POST" action="register.php">
 
             <label for="username" style="text-align: left;">Username</label>
