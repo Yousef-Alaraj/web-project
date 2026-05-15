@@ -1,10 +1,13 @@
 <?php
-require_once 'php/db_config.php';
+
+session_start();
+
+require_once 'db_config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
     $email = $_POST['email'];
-    // Phase 2 Requirement: Passwords must be hashed [cite: 2532, 14]
+
     $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
@@ -29,10 +32,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <header>
         <img src="assets/images/logo.jpg" alt="Jordan Visitor Guide Logo" id="logo">
+
         <nav>
             <ul id="navigation">
                 <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="places.php" class="nav-link">Places</a></li>
+                <li><a href="discover.php" class="nav-link">Discover</a></li>
                 <li><a href="contact.php" class="nav-link">Contact Us</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="dashboard.php" class="nav-link">Dashboard</a></li>
+                    <li><a href="logout.php" class="nav-link">Logout</a></li>
+                <?php else: ?>
+                    <li><a href="login.php" class="nav-link">Login / Register</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
@@ -51,11 +63,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" name="password" id="password" class="contactFormInput" placeholder="Enter Password" required>
 
             <button type="submit" class="submitBtn">Sign Up</button>
+            <p>Already have an account? <a href="login.php" style="color: #E07A5F; font-weight: bold;">Log in here</a></p>
         </form>
     </section>
 
     <footer>
         <h3>&copy; 2026 Jordan Visitor Guide</h3>
+        <p>For further inquiries send us an email at: <a
+                href="mailto:JordanVisitorGuide@gmail.com">JordanVisitorGuide@gmail.com</a></p>
+        <div class="socials-container">
+            <h3>Our Socials</h3>
+            <ul class="socials">
+                <li class="socials-items"><a href="#">Instagram</a></li>
+                <li class="socials-items"><a href="#">Facebook</a></li>
+                <li class="socials-items"><a href="#">Twitter</a></li>
+                <li class="socials-items"><a href="#">Youtube</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 
