@@ -67,7 +67,7 @@ require_once 'db_config.php';
 
     <section>
         <h2>Get in touch</h2>
-        <form class="contactForm" id="contact-form" action="process_contact.php" method="POST">
+        <form class="contactForm" id="contact-form" action="process_contact.php" method="POST" novalidate>
             <input type="text" placeholder="Name" id="user-name" class="contactFormInput">
 
             <input type="email" placeholder="Email" id="user-email" class="contactFormInput">
