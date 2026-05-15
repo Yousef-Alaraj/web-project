@@ -52,8 +52,8 @@
 # DEADLINE: Thursday, May 14th, 2026
 
 ### Tech Stack & Core Setup
-- [ ] **Architecture:** Transition the Phase 1 project into a full-stack web application using React, PHP, MySQL, and Sessions (Authentication).
-- [ ] **No Hardcoding:** Ensure all hardcoded data from Phase 1 is removed; all user-related data must be fetched dynamically from the database.
+- [x] **Architecture:** Transition the Phase 1 project into a full-stack web application using React, PHP, MySQL, and Sessions (Authentication).
+- [x] **No Hardcoding:** Ensure all hardcoded data from Phase 1 is removed; all user-related data must be fetched dynamically from the database.
 
 ### User Authentication (zeina)
 - [ ] **Registration & Login:** Implement user registration, user login, and user logout systems.
@@ -62,9 +62,9 @@
 - [ ] **Access Control:** Restrict access to personalized pages (like the dashboard) unless the user is logged in.
 
 ### Database (MySQL) Implementation
-- [ ] **DB Setup:** Create and connect to a MySQL database using PHP, implementing insert, select, update, and delete operations.
-- [ ] **Table: `users`:** Store registered user information. (zeina)
-- [ ] **Table: `places`:** Store the places shown on the discover page. (void)
+- [x] **DB Setup:** Create and connect to a MySQL database using PHP, implementing insert, select, update, and delete operations.
+- [x] **Table: `users`:** Store registered user information. (zeina)
+- [x] **Table: `places`:** Store the places shown on the discover page. (void)
 - [ ] **Table: `favorites`:** Store user favorites with fields for `userID` and `placeID`. (yousef)
 - [ ] **Table: `reviews`:** Store user reviews and feedback for places. (sami)
 - [ ] **Data Isolation:** Ensure each user sees only their own personalized favorite places, while all users can see reviews for places.
@@ -74,25 +74,25 @@
 - [ ] **React Concepts:** The component must demonstrate the use of state, props, and dynamic rendering of data using the `map()` function.
 
 ### Page Requirements & Updates
-- [ ] **`index.html` or `index.php`:** Update main entry point. (void)
-- [ ] **`register.php` & `login.php`:** Create registration and login interfaces (can be combined into one page). (zeina)
+- [x] **`index.html` or `index.php`:** Update main entry point. (void)
+- [x] **`register.php` & `login.php`:** Create registration and login interfaces (can be combined into one page). (zeina)
 - [ ] **`dashboard.php`:** Build a user dashboard featuring a customized welcome message. (sami)
     - [ ] Allow viewing available/favorite places.
     - [ ] Enable adding/removing places from favorites.
     - [ ] Allow users to add/view reviews.
 - [ ] **`favorites.php`:** Create a dedicated favorites page (or integrate this functionality directly into the dashboard). (yousef)
-- [ ] **`discover.php`:** Convert your discover page to dynamically list all places from the database. (sami) 
-- [ ] **`details.php`:** Update the single place details page. (void)
-    - [ ] Add a `textarea` so users can enter feedback/reviews.
-    - [ ] Display reviews from other users (as a DB retrieve operation or a React component).
-- [ ] **`logout.php`:** Implement a script to destroy the session and log the user out. (zeina)
+- [x] **`discover.php`:** Convert your discover page to dynamically list all places from the database. (sami) 
+- [x] **`details.php`:** Update the single place details page. (void)
+    - [x] Add a `textarea` so users can enter feedback/reviews.
+    - [x] Display reviews from other users (as a DB retrieve operation or a React component).
+- [x] **`logout.php`:** Implement a script to destroy the session and log the user out. (zeina)
 
 ### Frontend-Backend Integration & CRUD
-- [ ] **Data Flow:** Connect your HTML/React frontend to your PHP backend and MySQL database.
-    - [ ] Ensure forms send data to PHP.
-    - [ ] Ensure PHP inserts data into the database.
-    - [ ] Ensure data is retrieved and displayed dynamically.
-- [ ] **Favorites CRUD:** Replace the Phase 1 `localStorage` favorites system with database CRUD operations (Add, View, Remove).
+- [z] **Data Flow:** Connect your HTML/React frontend to your PHP backend and MySQL database.
+    - [x] Ensure forms send data to PHP.
+    - [x] Ensure PHP inserts data into the database.
+    - [x] Ensure data is retrieved and displayed dynamically.
+- [x] **Favorites CRUD:** Replace the Phase 1 `localStorage` favorites system with database CRUD operations (Add, View, Remove).
 
 ### Phase 2 Final Review & Submission
 - [ ] **Code Submission:** Submit the full project source code to the eLearning gateway.
