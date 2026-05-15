@@ -160,38 +160,166 @@ const jordanDestinations = [
     }
 ];
 
-function card(props) {
-    return `
-    <div class="card" id="${props.id}">
-        <h3 class="place-name">${props.name}</h3>
-        <img src="${props.images[0]}" alt="${props.name}" ">
-        <div class="place-info">
-            <span class="category">${props.categoryName}</span> 
-            <span class="rating">${props.rating} ⭐</span>
-        </div>
+let favourites=[]
 
-        <div class="place-bottom"> 
-        <p>${props.description}</p>
-        <br>
-        <a href="place-details.html?id=${props.id}">view details</a>
-        </div>
+for(let j=0;j<jordanDestinations.length+1;j++){
+    favourites.push(0)
+}
+
+
+
+// function card(props) {
+
+
+
+//     return `
+//     <div class="card" id="${props.id}">
+//         <h3 class="place-name">${props.name}</h3>
+//         <img src="${props.images[0]}" alt="${props.name}" ">
+//         <div class="place-info">
+//             <span class="category">${props.categoryName}</span> 
+//             <span class="rating">${props.rating} ⭐</span>
+//         </div>
+
+//         <div class="place-bottom"> 
+//         <p>${props.description}</p>
+//         <br>
+//         <div>
+//         <a href="place-details.html?id=${props.id}">view details</a>
+
+//         <label>add to favourites<input type="checkbox" ></label>
+        
+
+        
+//         <div>
+//         </div>
 
         
 
       
-    </div>`;
+//     </div>`;
+// }
+
+let favouritesCheckbox=document.getElementById("favouritesCheckbox")
+
+function Card(props) {
+
+    return (
+        <div className="card" id={props.id}>
+
+            <h3 className="place-name">
+                {props.name}
+            </h3>
+
+            <img 
+                src={props.images[0]} 
+                alt={props.name}
+            />
+
+            <div className="place-info">
+
+                <span className="category">
+                    {props.categoryName}
+                </span>
+
+                <span className="rating">
+                    {props.rating} ⭐
+                </span>
+
+            </div>
+
+            <div className="place-bottom">
+
+                <p>{props.description}</p>
+
+                <br />
+
+                <div className="bottom-container">
+
+                    <a href={`place-details.html?id=${props.id}`}>
+                        view details
+                    </a>
+
+                    <label>
+                        add to favourites
+
+                        <input 
+                            type="checkbox"
+                            // checked={props.isFavorite}
+                            onChange={(e) => {
+                                if (favouritesCheckbox.checked){
+                                    let cardd = e.target.closest(".card");
+                                    cardd.classList.add("remove4")
+                                    favourites[props.id]=0
+
+                                    
+                                }else{
+                                    if (e.target.checked){
+                                        favourites[props.id]=1
+                                        
+                                    }else{
+                                        favourites[props.id]=0
+                                    }
+                                }
+
+                            }}
+                        />
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+    );
 }
 
+favouritesCheckbox.addEventListener("change",()=>{
+    if (favouritesCheckbox.checked){
+        console.log(favourites)
+        for (let j=1;j<favourites.length+1;j++){
+            if (favourites[j]==0){
+                let el=document.getElementById(j)
+                el.classList.add("remove4")
+            }
+        }
 
-const cardsContainer = document.querySelector(".cards-container");
+    }else{
+
+        
+        let elements4 = document.querySelectorAll(".remove4");
+
+        for (let element of elements4) {
+            element.classList.remove("remove4");
+        }
+    }
+})
+
+// const cardsContainer = document.querySelector(".cards-container");
 
 
-for (let destination of jordanDestinations) {
-    // We add the HTML string to the container's innerHTML
-    cardsContainer.innerHTML += card(destination);
-}
+// for (let destination of jordanDestinations) {
+//     // We add the HTML string to the container's innerHTML
+//     cardsContainer.innerHTML += card(destination);
+// }
 
 
+const root = ReactDOM.createRoot(
+    document.querySelector(".cards-container")
+);
+
+root.render(
+    <>
+        {
+            jordanDestinations.map(destination => (
+                <Card
+                    key={destination.id}
+                    {...destination}
+                />
+            ))
+        }
+    </>
+);
 
 
 
@@ -350,5 +478,7 @@ for (let j=0;j<ratingCheckbox.length;j++){
     })
 
 }
+
+
 
 

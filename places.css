@@ -278,7 +278,18 @@ footer ul li {
     font-size: 20px;
 }
 
+.bottom-container{
+    display: flex;
 
+    justify-content: space-around;
+
+ 
+}
+
+.bottom-container input[type=checkbox]{
+    accent-color: #4B3D32;
+    color: whitesmoke;
+}
 
 .not-found{
     display: none;
@@ -288,6 +299,10 @@ footer ul li {
     display: none;
 }
 .remove2{
+    display: none;
+}
+
+.remove4{
     display: none;
 }
 
