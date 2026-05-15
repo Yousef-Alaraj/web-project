@@ -93,6 +93,7 @@ if (isset($_GET['id'])) {
         <section class="reviews-section">
             <h3>Leave a Review</h3>
             <form class="review-form" method="POST" action="submit_review.php">
+                <input type="hidden" name="place_id" value="<?php echo $place['id']; ?>">
                 <textarea name="user_review" placeholder="Write your feedback here..." rows="4" required></textarea>
                 <button type="submit" class="submitBtn">Submit Review</button>
             </form>
