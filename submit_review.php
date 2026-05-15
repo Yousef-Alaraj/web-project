@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once 'db_config.php';
+
 if(!isset($_SESSION['user_id'])){
     header("Location: login.php");
     exit();
@@ -8,13 +10,16 @@ if(!isset($_SESSION['user_id'])){
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $user_id = $_SESSION['user_id'];
     $place_id = $_POST['place_id'];
-    $review_text = $_POST['review_text'];
+    $rating = $_POST['rating'];
+    $review_text = $_POST['user_review'];
 
-    $sql = "INSERT INTO reviews (user_id, place_id, review_text) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO reviews (user_id, place_id, rating, review_text) VALUES (?, ?, ?, ?)";
+    
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$user_id, $place_id, $review_text]);
+    $stmt->execute([$user_id, $place_id, $rating, $review_text]);
 
     header("Location: details.php?id=" . $place_id);
+    exit();
 } else {
     header("Location: index.php");
     exit();

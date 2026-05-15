@@ -94,13 +94,56 @@ if (isset($_GET['id'])) {
             <h3>Leave a Review</h3>
             <form class="review-form" method="POST" action="submit_review.php">
                 <input type="hidden" name="place_id" value="<?php echo $place['id']; ?>">
+                
+                <select name="rating" required>
+                    <option value="" disabled selected>Select a Rating...</option>
+                    <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                    <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                    <option value="3">⭐⭐⭐ (3/5)</option>
+                    <option value="2">⭐⭐ (2/5)</option>
+                    <option value="1">⭐ (1/5)</option>
+                </select>
+
                 <textarea name="user_review" placeholder="Write your feedback here..." rows="4" required></textarea>
                 <button type="submit" class="submitBtn">Submit Review</button>
             </form>
             
             <h3>Recent Reviews</h3>
             <div id="reviews-list">
-                <p><em>Loading reviews...</em></p>
+                <?php
+                $review_sql = "SELECT reviews.review_text, reviews.rating, reviews.created_at, users.username 
+                               FROM reviews 
+                               JOIN users ON reviews.user_id = users.id 
+                               WHERE reviews.place_id = ? 
+                               ORDER BY reviews.created_at DESC";
+                
+                $review_stmt = $pdo->prepare($review_sql);
+                $review_stmt->execute([$place_id]);
+                $fetched_reviews = $review_stmt->fetchAll();
+
+                if (count($fetched_reviews) > 0):
+                    foreach ($fetched_reviews as $rev):
+                ?>
+                    <div class="review-card">
+                        <h4>👤 <?php echo htmlspecialchars($rev['username']); ?></h4>
+                        
+                        <p class="review-meta">
+                            <?php echo str_repeat('⭐', $rev['rating']); ?> 
+                            <span class="review-timestamp">
+                                🕒 <?php echo date('F j, Y \a\t g:i a', strtotime($rev['created_at'])); ?>
+                            </span>
+                        </p>
+                        
+                        <p class="review-text">
+                            <?php echo nl2br(htmlspecialchars($rev['review_text'])); ?>
+                        </p>
+                    </div>
+                <?php
+                    endforeach;
+                else:
+                    echo "<p>No reviews yet. Be the first to share your experience!</p>";
+                endif;
+                ?>
             </div>
         </section>
 
