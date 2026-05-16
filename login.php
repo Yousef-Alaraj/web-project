@@ -49,6 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php endif; ?>
             </ul>
         </nav>
+        <?php if (isset($_SESSION['username'])): ?>
+            <div class="user-greeting">
+                <span class="user-icon"><?php echo strtoupper(substr($_SESSION['username'], 0, 1)); ?></span>
+                <span class="user-name"><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+            </div>
+        <?php endif; ?>
     </header>
     <section>
         <h2>Login</h2>

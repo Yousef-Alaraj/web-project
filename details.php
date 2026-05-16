@@ -50,13 +50,19 @@ if (isset($_GET['id'])) {
                     <?php endif; ?>
                 </ul>
             </nav>
+            <?php if (isset($_SESSION['username'])): ?>
+                <div class="user-greeting">
+                    <span class="user-icon"><?php echo strtoupper(substr($_SESSION['username'], 0, 1)); ?></span>
+                    <span class="user-name"><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                </div>
+            <?php endif; ?>
         </header>
 
         <main class="place-details-container">
             <section class="title">
                 <h2><?php echo $place['name']; ?></h2>
                 <h3><?php echo $place['category_name']; ?></h3>
-                <p><?php echo $place['rating']?>/5🌟</p>
+                <p><?php echo "Rating: " . $place['rating']?>/5🌟</p>
             </section>
     
             <h2 id="pictures-featuring">Pictures featuring <?php echo $place['name']; ?></h2>
