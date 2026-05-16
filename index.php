@@ -122,12 +122,12 @@ $featured_places = $stmt->fetchAll();
                 ?>
                 
                 <div class="places-card">
-                    <img src="<?php echo $coverImage; ?>" alt="Picture of <?php echo $place['name']; ?>">
-                    <h2><?php echo $place['name']; ?></h2>
+                    <img src="<?php echo htmlspecialchars($coverImage); ?>" alt="Picture of <?php echo htmlspecialchars($place['name']); ?>">
+                    <h2><?php echo htmlspecialchars($place['name']); ?></h2>
                     
-                    <p><?php echo $place['description']; ?></p>
+                    <p><?php echo htmlspecialchars($place['description']); ?></p>
                     
-                    <a href="details.php?id=<?php echo $place['id']; ?>" class="places-button">View Details</a>
+                    <a href="details.php?id=<?php echo htmlspecialchars($place['id']); ?>" class="places-button">View Details</a>
                 </div>
                 
             <?php endforeach; ?>

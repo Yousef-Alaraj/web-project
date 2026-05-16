@@ -60,19 +60,19 @@ if (isset($_GET['id'])) {
 
         <main class="place-details-container">
             <section class="title">
-                <h2><?php echo $place['name']; ?></h2>
-                <h3><?php echo $place['category_name']; ?></h3>
-                <p><?php echo "Rating: " . $place['rating']?>/5🌟</p>
+                <h2><?php echo htmlspecialchars($place['name']); ?></h2>
+                <h3><?php echo htmlspecialchars($place['category_name']); ?></h3>
+                <p>Rating: <?php echo htmlspecialchars($place['rating']); ?>/5🌟</p>
             </section>
     
-            <h2 id="pictures-featuring">Pictures featuring <?php echo $place['name']; ?></h2>
+            <h2 id="pictures-featuring">Pictures featuring <?php echo htmlspecialchars($place['name']); ?></h2>
             <section class="gallery" id="place-gallery">
                 <?php
                 $imagesArray = json_decode($place['images'], true);
 
                 if ($imagesArray) {
                     foreach ($imagesArray as $imagePath) {
-                        echo "<img src='" . $imagePath . "' alt='Picture of " . $place['name'] . "'>";
+                        echo "<img src='" . htmlspecialchars($imagePath) . "' alt='Picture of " . htmlspecialchars($place['name']) . "'>";
                     }
                 } else {
                     echo "<p>No images available.</p>";
@@ -81,16 +81,16 @@ if (isset($_GET['id'])) {
             </section>
     
             <section class="details">
-                <p><?php echo $place['description']; ?></p>
+                <p><?php echo htmlspecialchars($place['description']); ?></p>
                     
                 <div class="place-info">
                     <h3>Visitor Information</h3>
                     <ul>
-                        <li><strong>📍 Location:</strong> <?php echo $place['location']; ?></li>
-                        <li><strong>🕒 Duration:</strong> <?php echo $place['trip_duration']?></li>
-                        <li><strong>🎟️ Entry Fee:</strong> <?php echo $place['fee']?></li>
-                        <li><strong>📞 Contact:</strong> <?php echo $place['contact_number']?></li>
-                        <li><strong>🏷️ Tags:</strong> <?php echo $place['tags']?></li>
+                        <li><strong>📍 Location:</strong> <?php echo htmlspecialchars($place['location']); ?></li>
+                        <li><strong>🕒 Duration:</strong> <?php echo htmlspecialchars($place['trip_duration']); ?></li>
+                        <li><strong>🎟️ Entry Fee:</strong> <?php echo htmlspecialchars($place['fee']); ?></li>
+                        <li><strong>📞 Contact:</strong> <?php echo htmlspecialchars($place['contact_number']); ?></li>
+                        <li><strong>🏷️ Tags:</strong> <?php echo htmlspecialchars($place['tags']); ?></li>
                     </ul>
                 </div>
             </section>
@@ -98,21 +98,27 @@ if (isset($_GET['id'])) {
 
         <section class="reviews-section">
             <h3>Leave a Review</h3>
-            <form class="review-form" method="POST" action="submit_review.php">
-                <input type="hidden" name="place_id" value="<?php echo $place['id']; ?>">
-                
-                <select name="rating" required>
-                    <option value="" disabled selected>Select a Rating...</option>
-                    <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
-                    <option value="4">⭐⭐⭐⭐ (4/5)</option>
-                    <option value="3">⭐⭐⭐ (3/5)</option>
-                    <option value="2">⭐⭐ (2/5)</option>
-                    <option value="1">⭐ (1/5)</option>
-                </select>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <form class="review-form" method="POST" action="submit_review.php">
+                    <input type="hidden" name="place_id" value="<?php echo htmlspecialchars($place['id']); ?>">
+                    
+                    <select name="rating" required>
+                        <option value="" disabled selected>Select a Rating...</option>
+                        <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                        <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                        <option value="3">⭐⭐⭐ (3/5)</option>
+                        <option value="2">⭐⭐ (2/5)</option>
+                        <option value="1">⭐ (1/5)</option>
+                    </select>
 
-                <textarea name="user_review" placeholder="Write your feedback here..." rows="4" required></textarea>
-                <button type="submit" class="submitBtn">Submit Review</button>
-            </form>
+                    <textarea name="user_review" placeholder="Write your feedback here..." rows="4" required></textarea>
+                    <button type="submit" class="submitBtn">Submit Review</button>
+                </form>
+            <?php else: ?>
+                <p style="text-align: center; margin: 20px 0;">
+                    <a href="login.php" style="color: #E07A5F; font-weight: bold;">Log in</a> to leave a review.
+                </p>
+            <?php endif; ?>
             
             <h3>Recent Reviews</h3>
             <div id="reviews-list">
