@@ -154,7 +154,7 @@ function Card(props) {
 
                                 }
                                 
-                                fetch("http://localhost/web-project/php/favouritesUpdate.php", {
+                                fetch("http://localhost/web-project/favouritesUpdate.php", {
                                 method: "POST",
                                 body: new URLSearchParams(postData)
                                 })
@@ -189,7 +189,7 @@ function App() {
   const [jordanDestinations, setJordanDestinations] = useState([]);
 
    useEffect(() => {
-  fetch("http://localhost/web-project/php/getPlaces.php")
+  fetch("http://localhost/web-project/getPlaces.php")
     .then(response => response.json())
     .then(data => {
       const fixedData = data.map(destination => {
@@ -221,14 +221,14 @@ function App() {
 
   
    useEffect(() => {
-  fetch("http://localhost/web-project/php/getFavourites.php")
+  fetch("http://localhost/web-project/getFavourites.php")
     .then(response => response.json())
     .then(data =>{
         console.log(data)
         let newArr=Array(9).fill(0)
         
         for (let j=0;j< 9;j++){
-            if (data.includes(j.toString())) newArr[j]=1
+            if (data.includes(j)) newArr[j]=1
         }
         setFavourites(newArr)
         console.log(newArr)

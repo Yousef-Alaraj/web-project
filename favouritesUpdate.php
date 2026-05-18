@@ -4,7 +4,7 @@ session_start();
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "city_explorer_db;";
+$database = "city_explorer_db";
 
 $conn = new mysqli($host, $username, $password, $database);
 

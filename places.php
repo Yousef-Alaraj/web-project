@@ -25,7 +25,7 @@ require_once 'db_config.php';
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script type="text/babel" src="js/places.js"></script>
+        <script type="text/babel" src="js/places2.js"></script>
 
 </head>
 <body>
