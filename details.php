@@ -72,7 +72,6 @@ if (isset($_GET['id'])) {
 
                 if ($imagesArray) {
                     foreach ($imagesArray as $imagePath) {
-                        // FIX: Swapped to double quotes for the src and alt attributes
                         echo '<img src="' . htmlspecialchars($imagePath) . '" alt="Picture of ' . htmlspecialchars($place['name']) . '">';
                     }
                 } else {
