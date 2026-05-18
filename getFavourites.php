@@ -1,23 +1,22 @@
 <?php
+session_start();
+require_once 'db_config.php';
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "city_explorer_db;";
-
-$conn = new mysqli($host, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
+if (!isset($_SESSION['user_id'])) {
+    echo json_encode([]);
+    exit();
 }
+$user_id = $_SESSION['user_id'];
 
-$sql = "SELECT place_id FROM favourites where user_id=1";
-$result = $conn->query($sql);
+$sql = "SELECT place_id FROM favourites where user_id= ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$user_id]);
+
 
 $favourites = [];
 
-while ($row = $result->fetch_object()) {
-    $favourites[] = $row->place_id;
+while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
+    $favourites[] = $row->place_id; 
 }
 
 header("Content-Type: application/json");

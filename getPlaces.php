@@ -1,24 +1,12 @@
 <?php
-
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "city_explorer_db;";
-
-$conn = new mysqli($host, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
-}
+session_start();
+require_once 'db_config.php';
 
 $sql = "SELECT * FROM places";
-$result = $conn->query($sql);
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
 
-$places = [];
-
-while ($row = $result->fetch_object()) {
-    $places[] = $row;
-}
+$places = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 header("Content-Type: application/json");
 echo json_encode($places);

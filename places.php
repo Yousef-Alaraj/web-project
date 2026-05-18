@@ -25,7 +25,7 @@ require_once 'db_config.php';
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script type="text/babel" src="js/places2.js"></script>
+        <script type="text/babel" src="js/places.js"></script>
 
 </head>
 <body>
@@ -34,10 +34,10 @@ require_once 'db_config.php';
 
             <nav>
                 <ul id="navigation">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="places.html" class="nav-link">Places</a></li>
-                    <li><a href="discover.html" class="nav-link">Discover</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="index.php" class="nav-link">Home</a></li>
+                    <li><a href="places.php" class="nav-link">Places</a></li>
+                    <li><a href="discover.php" class="nav-link">Discover</a></li>
+                    <li><a href="contact.php" class="nav-link">Contact Us</a></li>
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <li><a href="dashboard.php" class="nav-link">Dashboard</a></li>
                         <li><a href="logout.php" class="nav-link">Logout</a></li>
