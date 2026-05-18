@@ -306,6 +306,10 @@ footer ul li {
     display: none;
 }
 
+.favouritesCheckboxContainer{
+    display: block;
+}
+
 @media (max-width:900px){
     /* body{
         font-size: medium;
