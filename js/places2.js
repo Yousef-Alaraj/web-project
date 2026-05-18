@@ -133,7 +133,7 @@ function Card(props) {
 
                 <div className="bottom-container">
 
-                    <a href={`place-details.html?id=${props.id}`}>
+                    <a href={`details.php?id=${props.id}`}>
                         view details
                     </a>
 

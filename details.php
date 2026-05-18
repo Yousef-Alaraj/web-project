@@ -132,6 +132,12 @@ if (isset($_GET['id'])) {
                 ?>
                     <div class="review-card">
                         <h4>👤 <?php echo htmlspecialchars($rev['username']); ?></h4>
+
+                        <?php if (isset($_SESSION['username']) && $_SESSION['username'] === $rev['username']): ?>
+                            <span style="background-color: #B59A7A; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-left: 8px;">
+                                You
+                            </span>
+                        <?php endif; ?>
                         
                         <p class="review-meta">
                             <?php echo str_repeat('⭐', $rev['rating']); ?> 
