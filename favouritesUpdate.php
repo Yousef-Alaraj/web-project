@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $host = "localhost";
 $username = "root";
@@ -12,7 +13,9 @@ if ($conn->connect_error) {
 }
 
 
-$user_id = $_POST["user_id"];
+
+
+$user_id = $_SESSION["user_id"];
 $place_id = $_POST["place_id"];
 $action = $_POST["action"];
 
