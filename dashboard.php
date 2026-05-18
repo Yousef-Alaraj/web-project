@@ -44,8 +44,8 @@ if (!isset($_SESSION['user_id'])) {
     <h1>Welcome to Your Dashboard, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
     
     <div class="dashboard-content">
-        <h2>Recent Reviews</h2>
         <div class="dashboard-section">
+            <h2>Recent Reviews</h2>
             <div id="reviews-list">
                 <?php
                 $review_sql = "SELECT reviews.review_text, reviews.rating, reviews.created_at, users.username 
@@ -90,13 +90,11 @@ if (!isset($_SESSION['user_id'])) {
                 ?>
             </div>
         </div>
-    </div>
-
-    <div class="dashboard-content">
-        <?php
+        
+        <div class="dashboard-section">
+            <?php
         $c = count($fetched_reviews);
         echo "<h2>You have left {$c} reviews.</h2>";
-        
         $sql = "SELECT * FROM favourites 
                 JOIN places ON favourites.place_id = places.id 
                 WHERE favourites.user_id = ?
@@ -104,17 +102,35 @@ if (!isset($_SESSION['user_id'])) {
         $stmt = $pdo->prepare($sql);    
         $stmt->execute([$_SESSION['user_id']]);
         $favorites = $stmt->fetchAll();
-        
+
         if (count($favorites) > 0):
+            echo "<h3>Keep it up!</h3>";
             $images_array = json_decode($favorites[0]['images'], true);
             echo "<h2>Your Favorite Place</h2>";
             ?>
             <a href="details.php?id=<?php echo $favorites[0]['place_id']; ?>" class="dashboard-button">
                 <img src="<?php echo htmlspecialchars($images_array[0]); ?>" alt="Picture of favorite place" />
             </a>
-        <?php endif; ?>
+            <h3>click the image to view details</h3>
+            <?php else: ?>
+                <h2>You haven't favorited any places yet.</h2>
+                <?php endif; ?>
+        </div>
     </div>
-    
-    <p style="text-align: center;">Keep exploring and sharing your experiences to help others discover the best of Amman!</p>
-</body>
-</html>
+            
+            <h3 style="text-align: center;">Keep exploring and sharing your experiences to help others discover the best of Amman!</h3>
+            <footer>
+                <h3>&copy; 2026 Jordan Visitor Guide</h3>
+                <p>For further inquiries send us an email at: <a href="mailto:JordanVisitorGuide@gmail.com">JordanVisitorGuide@gmail.com</a></p>
+                <div class="socials-container">
+                    <h3>Our Socials</h3>
+                    <ul class="socials">
+                        <li class="socials-items"><a href="#">Instagram</a></li>
+                        <li class="socials-items"><a href="#">Facebook</a></li>
+                        <li class="socials-items"><a href="#">Twitter</a></li>
+                        <li class="socials-items"><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </body>
+        </html>

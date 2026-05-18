@@ -311,6 +311,23 @@ footer ul li {
     margin-bottom: 15px;
 }
 
+.dashboard-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+.dashboard-section{
+    width : 700px;
+    padding: 20px;
+}
+.dashboard-section img{
+    width: 500px;
+    height: auto;
+    border-radius: 2px;
+    box-sizing: border-box;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
 /* MOBILE AND IPAD RESPONSIVENESS */
 @media (max-width: 600px) {
     header {
